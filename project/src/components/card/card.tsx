@@ -1,10 +1,10 @@
 import {City} from '../../types';
- type  CardProps={
+ type  CityProps={
    card:City
  }
 
 
-function Card({card}:CardProps): JSX.Element {
+function Card({card}:CityProps): JSX.Element {
 
   return (
     <article className="cities__place-card place-card">

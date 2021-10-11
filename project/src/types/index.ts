@@ -1,17 +1,14 @@
 export type City = {
   id: number,
-  isFavorites?: boolean,
+  cityName:string,
+  images:string[],
+  isFavorite?: boolean,
   isPremium?: boolean,
   maxAdults: number,
   previewImage: string,
   price: number,
   rating: number,
   title: string,
-  type: string,
-  images:string[]
+  type: string
 };
 
-
-export type CityPlace = {
-
-};

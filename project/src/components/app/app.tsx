@@ -1,13 +1,14 @@
 import Main from '../main/main';
 
 function App(): JSX.Element {
-  return <Main  cards={cards}/>;
+  return <Main  cities={cities}/>;
 }
 
 
-const cards=
+const cities=
 [ {
   'id': 1,
+  'cityName':'Paris',
   'images': ['img/1.png', 'img/2.png'],
   'isFavorite': false,
   'isPremium': false,
@@ -20,6 +21,7 @@ const cards=
 },
 {
   'id': 2,
+  'cityName':'Cologne',
   'images': ['img/1.png', 'img/2.png'],
   'isFavorite': false,
   'isPremium': false,
@@ -32,6 +34,7 @@ const cards=
 },
 {
   'id': 3,
+  'cityName':'Brussels',
   'images': ['img/1.png', 'img/2.png'],
   'isFavorite': false,
   'isPremium': false,
@@ -44,8 +47,9 @@ const cards=
 },
 {
   'id': 4,
+  'cityName':'Amsterdam',
   'images': ['img/1.png', 'img/2.png'],
-  'isFavorite': false,
+  'isFavorite': true,
   'isPremium': true,
   'maxAdults': 4,
   'previewImage': 'img/1.png',
@@ -56,6 +60,7 @@ const cards=
 },
 {
   'id': 5,
+  'cityName':'Hamburg',
   'images': ['img/1.png', 'img/2.png'],
   'isFavorite': false,
   'isPremium': false,
@@ -68,6 +73,7 @@ const cards=
 },
 {
   'id': 6,
+  'cityName':'Dusseldorf',
   'images': ['img/1.png', 'img/2.png'],
   'isFavorite': false,
   'isPremium': false,
@@ -77,7 +83,6 @@ const cards=
   'rating': 4.8,
   'title': 'Beautiful & luxurious studio at great location',
   'type': 'apartment',
-},
+}];
 
-];
 export default App;

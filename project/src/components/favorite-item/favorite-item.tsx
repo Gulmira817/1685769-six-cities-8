@@ -1,12 +1,11 @@
 import Card from '../card/card';
 import {City} from '../../types';
-
 type FavoriteItemProps={
   name:string,
   cards:City[]
 }
 
-function FavoriteItem({name,cards}:FavoriteItemProps){
+function FavoriteItem({name,cards}:FavoriteItemProps):JSX.Element{
   return(
     <li className="favorites__locations-items">
 
@@ -19,7 +18,7 @@ function FavoriteItem({name,cards}:FavoriteItemProps){
       </div>
       <div className="favorites__places">
         {
-          cards.map((card)=>card.isFavorites?
+          cards.map((card)=>card.isFavorite?
             card:(<Card card={card}  key={card.id} />))
         }
       </div>

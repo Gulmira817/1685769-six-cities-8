@@ -1,19 +1,18 @@
-import FavoritesItem from '../favorite-item/favoriteItem';
+import FavoriteItem from '../favorite-item/favorite-item';
 import {City} from '../../types';
 
 
-type FavorityCityiesProps={
-  names:string[],
+type FavoriteCitiesProps={
   cards:City[]
 }
-function FavoritеCityies({names,cards}:FavorityCityiesProps){
+function FavoritеCities({cards}:FavoriteCitiesProps):JSX.Element{
   return(
     <main className="page__main page__main--favorites">
       <div className="page__favorites-container container">
         <section className="favorites">
           <h1 className="favorites__title">Saved listing</h1>
           <ul className="favorites__list">
-            {names.map((item)=><FavoritesItem  name={item} key={names.indexOf(item)} cards={cards}/>)}
+            {cards.map((card)=><FavoriteItem  name={card.cityName} key={card.cityName} cards={cards}/>)}
           </ul>
         </section>
       </div>
@@ -21,6 +20,6 @@ function FavoritеCityies({names,cards}:FavorityCityiesProps){
   );
 }
 
-export default FavoritеCityies;
+export default FavoritеCities;
 
 
