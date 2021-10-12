@@ -25,6 +25,22 @@
       "react-app",
       "react-app/jest",
       "htmlacademy/react-typescript"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-module-boundary-types": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.ts",
+          "*.tsx"
+        ],
+        "rules": {
+          "@typescript-eslint/explicit-module-boundary-types": [
+            "off"
+          ]
+        }
+      }
     ]
   },
   "browserslist": {
