@@ -1,9 +1,45 @@
-import Main from '../main/main';
+import Main from '../../pages/main/main';
+import Login from '../../pages/login/login';
+import Room from '../../pages/room/room';
+import FavoritеCities from '../../pages/favorite-cities/favorite-cities';
+import NotFoundPage from '../../pages/not-found-page/not-found-page';
+import { BrowserRouter, Route, Switch ,Link} from 'react-router-dom';
+import {AppRoute,AuthStatus} from '../../constants/const';
+import React, { Fragment } from 'react';
+import PrivateRoute from '../../components/layout/private-route';
 
 function App(): JSX.Element {
-  return <Main  cities={cities}/>;
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact  path={AppRoute.Root}>
+          <Main  cities={cities}/>
+        </Route>
+        <Route exact  path={AppRoute.Login}>
+          <Login/>
+        </Route>
+        <Route exact  path={AppRoute.Room}>
+          <Room />
+        </Route>
+        <PrivateRoute
+          exact
+          path={AppRoute.Favorites}
+          render={() =><FavoritеCities cards={cities}/>}
+          authorizationStatus={AuthStatus.NoAuth}
+        >
+        </PrivateRoute>
+        <Route
+          render={() => (
+            <Fragment>
+              <NotFoundPage/>
+              <Link to="/">Go to main page</Link>
+            </Fragment>
+          )}
+        />
+      </Switch>
+    </BrowserRouter>
+  );
 }
-
 
 const cities=
 [ {
