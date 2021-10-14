@@ -1,5 +1,5 @@
 import {City} from '../../types';
-import Card from '../card/card';
+import Card from '../../components/card/card';
 
 type MainProps={
   cities:City[],
