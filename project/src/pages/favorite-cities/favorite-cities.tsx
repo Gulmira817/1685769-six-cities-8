@@ -1,21 +1,20 @@
-import FavoriteItem from '../../components/favorite-item/favorite-item';
-import {City} from '../../types';
 import Card from '../../components/card/card';
+import FavoriteItem from '../../components/favorite-item/favorite-item';
+import { Offers } from '../../types';
 
 type FavoriteCitiesProps={
-  cards:City[],
-
+  offers:Offers,
 }
-function FavoritеCities({cards}:FavoriteCitiesProps):JSX.Element{
+function FavoritеCities({offers}:FavoriteCitiesProps):JSX.Element{
   return(
     <main className="page__main page__main--favorites">
       <div className="page__favorites-container container">
         <section className="favorites">
           <h1 className="favorites__title">Saved listing</h1>
           <ul className="favorites__list">
-            {cards.map((card)=>(
-              <FavoriteItem key={card.id} name={card.cityName}>
-                {card.isFavorite && <Card card={card}  key={card.id}/>}
+            {offers.map((offer)=>(
+              <FavoriteItem key={offer.id} name={offer.city.name}>
+                {offer.isFavorite && <Card offer={offer}  key={offer.id}   onMouseEnter={()=>false}/>}
               </FavoriteItem>
             ))}
           </ul>

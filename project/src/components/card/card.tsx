@@ -1,15 +1,19 @@
-import {City} from '../../types';
+import { Link } from 'react-router-dom';
+import { AppRoute } from '../../constants/const';
+import { Offer } from '../../types';
+
  type  CityProps={
-   card:City
+   offer:Offer;
+  onMouseEnter: () => void;
  }
 
 
-function Card({card}:CityProps): JSX.Element {
+function Card({offer,onMouseEnter}:CityProps): JSX.Element {
 
   return (
     <article className="cities__place-card place-card">
       <div className="place-card__mark">
-        <span>{card.isPremium}</span>
+        <span>{offer.isPremium}</span>
       </div>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
@@ -19,7 +23,7 @@ function Card({card}:CityProps): JSX.Element {
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
-            <b className="place-card__price-value">{card.price}</b>
+            <b className="place-card__price-value">{offer.price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
           <button className="place-card__bookmark-button button" type="button">
@@ -32,13 +36,13 @@ function Card({card}:CityProps): JSX.Element {
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
             <span style={{width:'80%'}}></span>
-            <span className="visually-hidden">{card.rating}</span>
+            <span className="visually-hidden">{offer.rating}</span>
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{card.title}</a>
+          <Link to={AppRoute.Room}>{offer.title}</Link>
         </h2>
-        <p className="place-card__type">{card.type}</p>
+        <p className="place-card__type">{offer.type}</p>
       </div>
     </article>
   );}
