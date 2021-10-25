@@ -6,7 +6,7 @@ zoom: number
 
 export  type City = {
   name:string,
-  location:Location
+  location:Location,
 };
 
 export type Review = {
@@ -41,5 +41,20 @@ export type Offer = {
   isFavorite?: boolean,
 }
 
+export type Point = {
+  title: string;
+  latitude: number;
+  longitude: number;
+};
 
+export type Points = Point[];
 export type Offers=Offer[]
+
+export type MainProps={
+  offers:Offers,
+
+}
+export type AppProps = {
+  offers: Offers;
+  reviews: Review[];
+}
