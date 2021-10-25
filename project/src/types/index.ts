@@ -41,13 +41,7 @@ export type Offer = {
   isFavorite?: boolean,
 }
 
-export type Point = {
-  title: string;
-  latitude: number;
-  longitude: number;
-};
 
-export type Points = Point[];
 export type Offers=Offer[]
 
 export type MainProps={
