@@ -3,16 +3,16 @@ import 'leaflet/dist/leaflet.css';
 import { useEffect, useRef } from 'react';
 import { URL_MARKER_CURRENT, URL_MARKER_DEFAULT } from '../../constants/const';
 import useMap from '../../hooks/useMap';
-import { Offer, Offers } from '../../types';
+import { City, Offer, Offers } from '../../types';
 type MapProps = {
   offers: Offers;
   selectedPoint: Offer | undefined;
+  city:City
 };
 
 
 function Map(props:MapProps) {
-  const{offers,selectedPoint}=props;
-  const city=offers[3].city;
+  const{offers,selectedPoint,city}=props;
   const mapRef = useRef(null);
   const map = useMap(mapRef, city);
 
@@ -45,7 +45,7 @@ function Map(props:MapProps) {
   }, [map,selectedPoint,offers]);
   return (
     <div
-      style={{height: '1000px'}}
+      style={{height: '600px'}}
       ref={mapRef}
     >
     </div>

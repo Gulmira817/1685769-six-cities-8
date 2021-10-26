@@ -1,0 +1,107 @@
+import { Offers } from '../types';
+
+export const nearPlacesCards: Offers = [
+  {
+    bedrooms: 1,
+    city: {
+      location: {
+        latitude:52.3909553943508,
+        longitude:4.85309666406198,
+        zoom: 4,
+      },
+      name:'Wood and stone place',
+    },
+    description:'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
+    goods: ['Heating','Kitchen', 'Cable TV', 'Washing machine', 'Coffee machine', 'Dishwasher'],
+    host: {
+      avatarUrl: 'img/1.png',
+      id: 3,
+      isPro: true,
+      name: 'Angelina',
+    },
+    id: 1,
+    images: ['img/1.png','img/2.png'],
+    isFavorite: false,
+    isPremium: false,
+    location: {
+      latitude: 52.369553943508,
+      longitude:4.85309666406198,
+      zoom: 4,
+    },
+    maxAdults: 4,
+    previewImage:'img/1.png',
+    price: 120,
+    rating: 4.8,
+    title:'Beautiful & luxurious studio at great location',
+    type:'apartment',
+  },
+  {
+    bedrooms: 2,
+    city: {
+      location: {
+        latitude:52.369553943508,
+        longitude:4.85309666406198,
+        zoom: 5,
+      },
+      name:'Canal View Prinsengracht',
+    },
+    description:'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
+    goods: ['Heating','Kitchen', 'Cable TV', 'Washing machine', 'Coffee machine', 'Dishwasher'],
+    host: {
+      avatarUrl: 'img/1.png',
+      id: 3,
+      isPro: true,
+      name: 'Canal View Prinsengracht',
+    },
+    id: 2,
+    images: ['img/1.png','img/2.png'],
+    isFavorite: false,
+    isPremium: false,
+    location: {
+      latitude: 52.369553943508,
+      longitude:4.85309666406198,
+      zoom: 8,
+    },
+    maxAdults: 4,
+    previewImage:'img/1.png',
+    price: 120,
+    rating: 4.8,
+    title:'Beautiful & luxurious studio at great location',
+    type:'apartment',
+  },
+  {
+    bedrooms: 3,
+    city: {
+      location: {
+        latitude: 52.3909553943508,
+        longitude:  4.929309666406198,
+        zoom: 10,
+      },
+      name:'Nice, cozy, warm big bed apartment',
+    },
+    description:'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
+    goods: ['Heating','Kitchen', 'Cable TV', 'Washing machine', 'Coffee machine', 'Dishwasher'],
+    host: {
+      avatarUrl: 'img/1.png',
+      id: 3,
+      isPro: true,
+      name: 'Angelina',
+    },
+    id: 3,
+    images: ['img/1.png','img/2.png'],
+    isFavorite: false,
+    isPremium: false,
+    location: {
+      latitude:52.3909553943508,
+      longitude:  4.929309666406198,
+      zoom: 8,
+    },
+    maxAdults: 4,
+    previewImage:'img/1.png',
+    price: 120,
+    rating: 4.8,
+    title:'Beautiful & luxurious studio at great location',
+    type:'apartment',
+  },
+
+];

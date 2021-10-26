@@ -11,8 +11,8 @@ import { AppProps } from '../../types';
 
 
 function App(props:AppProps): JSX.Element {
-  const {offers} = props;
-  // const review=props.reviews;
+  const {offers,nearPlacesCards} = props;
+
   return (
     <BrowserRouter>
       <Switch>
@@ -23,7 +23,7 @@ function App(props:AppProps): JSX.Element {
           <Login/>
         </Route>
         <Route exact  path={AppRoute.Room}>
-          <Room />
+          <Room  cards={nearPlacesCards}/>
         </Route>
         <PrivateRoute
           exact

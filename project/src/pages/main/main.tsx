@@ -30,7 +30,7 @@ function Main(props:MainProps): JSX.Element {
           <OfferCardList  offers={offers}/>
           <div className="cities__right-section">
             <section className="cities__map map">
-              <Map  offers={offers} selectedPoint={selectedPoint} />
+              <Map  offers={offers} selectedPoint={selectedPoint} city={offers[3].city} />
             </section>
           </div>
         </div>

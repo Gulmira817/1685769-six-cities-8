@@ -48,7 +48,18 @@ export type MainProps={
   offers:Offers,
 
 }
+
+export type RoomProps={
+  cards:Offers,
+
+}
+export type PlacesNeighbourhoodListProps={
+  cards:Offers,
+  onListItemHover: (listItemName: string | number) => void;
+
+}
 export type AppProps = {
   offers: Offers;
   reviews: Review[];
+  nearPlacesCards:Offers
 }
