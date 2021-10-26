@@ -6,7 +6,7 @@ zoom: number
 
 export  type City = {
   name:string,
-  location:Location
+  location:Location,
 };
 
 export type Review = {
@@ -43,3 +43,12 @@ export type Offer = {
 
 
 export type Offers=Offer[]
+
+export type MainProps={
+  offers:Offers,
+
+}
+export type AppProps = {
+  offers: Offers;
+  reviews: Review[];
+}
